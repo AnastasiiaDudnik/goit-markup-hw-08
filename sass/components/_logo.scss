@@ -1,0 +1,29 @@
+.logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  font-weight: 700;
+}
+
+.logo__span {
+  color: var(--accent-color);
+}
+
+.logo__dark {
+  color: var(--black-color);
+}
+
+.footer__logo {
+  padding: 0;
+  margin-right: 0;
+}
+
+.logo__light {
+  color: var(--white-color);
+}

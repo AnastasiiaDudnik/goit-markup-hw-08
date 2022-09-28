@@ -1,0 +1,26 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 24px;
+  padding-left: 24px;
+
+  background-color: var(--overlay-cl);
+
+  transform: translateY(100%);
+  transition: transform var(--animation);
+}
+
+.overlay__desc {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  color: var(--white-color);
+}

@@ -1,0 +1,155 @@
+.modal-title {
+  display: block;
+
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.app-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.app-form__label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.app-form__span {
+  margin-bottom: 4px;
+
+  color: rgba(117, 117, 117, 1);
+}
+
+.app-form__input {
+  padding-left: 35px;
+  padding-right: 35px;
+
+  width: 100%;
+  height: 40px;
+
+  outline: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+}
+
+.app-form__input:hover,
+.app-form__input:focus {
+  border-color: var(--accent-color);
+}
+
+.app-form__icon {
+  position: absolute;
+
+  left: 12px;
+  bottom: 11px;
+
+  transition: fill var(--animation);
+}
+
+.app-form__input:hover + .app-form__icon,
+.app-form__input:focus + .app-form__icon {
+  fill: var(--accent-color);
+}
+
+.app-form__txt {
+  resize: none;
+
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  width: 100%;
+
+  font-size: 12px;
+
+  outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+}
+
+.app-form__txt:hover,
+.app-form__txt:focus {
+  border-color: var(--accent-color);
+}
+
+.app-form__txt::placeholder {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.icon-checked {
+  opacity: 0;
+  transition: opacity var(--animation);
+}
+
+.checkbox-input:checked + .checkbox-svg .icon-checked {
+  opacity: 1;
+}
+
+.checkbox-input:checked + .checkbox-svg .icon-unchecked {
+  opacity: 0;
+}
+
+.icon-uncheked {
+  transition: opacity var(--animation);
+}
+
+.checkbox__span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  user-select: none;
+
+  line-height: calc(24 / 16);
+  color: var(--text-color);
+}
+
+.checkbox-link {
+  color: var(--accent-color);
+}
+
+.form__btn {
+  padding: 10px 52px;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+
+  cursor: pointer;
+
+  transition: background-color var(--animation), box-shadow var(--animation);
+}
+
+.form__btn:hover,
+.form__btn:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

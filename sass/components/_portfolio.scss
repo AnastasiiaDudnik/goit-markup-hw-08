@@ -1,0 +1,102 @@
+.portfolio {
+  @extend %section;
+}
+
+.portfolio-btn-list {
+  @extend %list;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 8px;
+}
+
+.port__btn {
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+
+  color: var(--primary-text-color);
+  background-color: var(--btn-color);
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+
+  cursor: pointer;
+
+  transition: background-color var(--animation), color var(--animation),
+    box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+
+    box-shadow: 0px 4px 4px -2px var(--social-icon-cl);
+  }
+}
+
+.port-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.port-list__item {
+  flex-basis: calc((100% - 30px * 2) / 3);
+}
+
+.port-photo-link {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+
+  transition: box-shadow var(--animation);
+
+  &:hover {
+    box-shadow: 0px 2px 5px 0px var(--social-icon-cl);
+  }
+}
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.port-list__item:hover .overlay {
+  transform: translateY(0);
+}
+
+.port-wrap {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.port-wrap__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+
+.port-wrap__name {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+}

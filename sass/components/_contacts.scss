@@ -1,0 +1,40 @@
+.contact-list {
+  @extend %list;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-list__link {
+  @extend %link;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contact-list__icon {
+  fill: var(--text-color);
+
+  transition: fill var(--animation);
+}
+
+.contact-list__link:hover .contact-list__icon,
+.contact-list__link:focus .contact-list__icon {
+  fill: var(--accent-color);
+}
