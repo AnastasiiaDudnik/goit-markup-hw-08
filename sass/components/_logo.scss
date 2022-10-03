@@ -22,6 +22,10 @@
 .footer__logo {
   padding: 0;
   margin-right: 0;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .logo__light {

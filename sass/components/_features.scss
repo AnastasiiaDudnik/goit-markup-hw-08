@@ -1,16 +1,31 @@
 .features {
-  @extend %section;
+  @include section;
   padding-bottom: 0;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+  }
 }
 
 .features-list {
   @extend %list;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .features-list__item {
-  flex-basis: calc((100% - 30px * 3) / 4);
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px * 1) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 30px * 3) / 4);
+  }
 }
 
 .icon-container {
@@ -35,6 +50,10 @@
   letter-spacing: 0.03em;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features-list__txt {

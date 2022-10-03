@@ -1,5 +1,5 @@
 .team {
-  @extend %section;
+  @include section;
   background-color: var(--btn-color);
 }
 
@@ -7,18 +7,34 @@
   @extend %list;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .team-item {
   background-color: var(--white-color);
-  flex-basis: calc((100% - 30px * 3) / 4);
 
   box-shadow: 0px 2px 5px 0px var(--social-icon-cl);
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px * 1) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 30px * 3) / 4);
+  }
 }
 
 .team-wrap {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 30px;
+  }
 }
 
 .team-mate {

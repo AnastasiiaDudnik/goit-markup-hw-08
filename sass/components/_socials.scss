@@ -37,12 +37,17 @@
   fill: var(--white-color);
 }
 
+
 .footer-socials__txt {
   margin-bottom: 20px;
 
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .socials__dark {
@@ -61,6 +66,11 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    align-items: baseline;
+  }
 }
 
 .footer-icon {

@@ -2,6 +2,7 @@
 @import "./utils/visually-hidden";
 @import "./utils/reset";
 @import "./utils/placeholders";
+@import "./utils/mixins";
 
 @import "./components/base";
 @import "./components/header";
@@ -21,3 +22,4 @@
 @import "./components/footer-form";
 @import "./components/modal-wimdow";
 @import "./components/application-form";
+@import "./components/menu";

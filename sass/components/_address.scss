@@ -1,17 +1,25 @@
 .address-container {
-  margin-right: 70px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+  }
 }
 
 .adress {
   font-style: normal;
 
   margin-top: 20px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .adress-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  @extend %list;
 }
 
 .adress-link {

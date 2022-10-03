@@ -1,5 +1,5 @@
 .portfolio {
-  @extend %section;
+  @include section;
 }
 
 .portfolio-btn-list {
@@ -9,6 +9,16 @@
   justify-content: center;
   margin-bottom: 50px;
   gap: 8px;
+
+  @media screen and (max-width: 767px) {
+    width: 326px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 300px;
+  }
 }
 
 .port__btn {
@@ -50,7 +60,14 @@
 }
 
 .port-list__item {
-  flex-basis: calc((100% - 30px * 2) / 3);
+  @media screen and (min-width: $tablet) {
+    max-width: 354px;
+    flex-basis: calc((100% - 30px * 1) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 30px * 2) / 3);
+  }
 }
 
 .port-photo-link {

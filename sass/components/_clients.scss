@@ -1,21 +1,35 @@
 .clients {
-  @extend %section;
-}
-
-.clients-list__item {
-  flex-basis: calc((100% - 30px * 5) / 6);
-
-  background-color: var(--white-color);
-  border: 1px solid var(--social-icon-cl);
-  border-radius: 4px;
-
-  transition: border-color var(--animation);
+  @include section;
 }
 
 .clients-list {
   @extend %list;
   display: flex;
   gap: 30px;
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
+}
+
+.clients-list__item {
+  background-color: var(--white-color);
+  border: 1px solid var(--social-icon-cl);
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+
+  @media screen and (max-width: 767px) {
+    flex-basis: calc((100% - 30px * 1) / 2);
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px * 2) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 30px * 5) / 6);
+  }
 }
 
 .clients-link {

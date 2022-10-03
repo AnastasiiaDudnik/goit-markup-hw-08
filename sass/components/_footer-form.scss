@@ -1,5 +1,12 @@
 .footer-form {
-  margin-left: auto;
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
 }
 
 .footer-form__txt {
@@ -10,6 +17,10 @@
   text-transform: uppercase;
 
   color: var(--white-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .ft-form-container {
@@ -17,6 +28,11 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .footer-label {
@@ -28,8 +44,6 @@
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 16px;
-
-  width: 358px;
 
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -47,6 +61,18 @@
   &:hover,
   &:focus {
     border-color: var(--accent-color);
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 300px;
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 358px;
   }
 }
 
